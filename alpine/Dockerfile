@@ -1,6 +1,6 @@
 FROM alpine:3.2
 
-ENV OPENRESTY_VERSION 1.7.10.2
+ENV OPENRESTY_VERSION 1.9.3.2
 ENV OPENRESTY_PREFIX /opt/openresty
 ENV NGINX_PREFIX /opt/openresty/nginx
 ENV VAR_PREFIX /var/nginx
@@ -32,6 +32,7 @@ RUN echo "==> Installing dependencies..." \
     --with-luajit \
     --with-pcre-jit \
     --with-ipv6 \
+    --with-stream \
     --with-http_ssl_module \
     --without-http_ssi_module \
     --without-http_userid_module \

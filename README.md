@@ -1,10 +1,12 @@
 # OpenResty Docker image
 
-This repository contains Dockerfiles for [ficusio/openresty](https://registry.hub.docker.com/u/ficusio/openresty/) image, which has two flavors.
+This repository contains a fork of Dockerfiles for [ficusio/openresty](https://registry.hub.docker.com/u/ficusio/openresty/) image, which has two flavors.
+
+This fork updates the version of OpenResty to the latest as of right now (v1.9.3.2), and enables stream support.
 
 ### Flavors
 
-The main one is [Alpine linux](https://registry.hub.docker.com/u/alpinelinux/base/)-based `ficusio/openresty:latest`. Its virtual size is just 39MB, yet it contains a fully functional [OpenResty](http://openresty.org) bundle  v1.7.10.2 and [`apk` package manager](http://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management), which allows you to easily install [lots of  pre-built packages](http://forum.alpinelinux.org/packages).
+The main one is [Alpine linux](https://registry.hub.docker.com/u/alpinelinux/base/)-based `ficusio/openresty:latest`. Its virtual size is just 39MB, yet it contains a fully functional [OpenResty](http://openresty.org) bundle  v1.9.3.2 and [`apk` package manager](http://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management), which allows you to easily install [lots of  pre-built packages](http://forum.alpinelinux.org/packages).
 
 The other flavor is `ficusio/openresty:debian`. It is based on `debian:wheezy` and thus is much bigger in size (256MB). It is mostly useful for NginX profiling, as it may not be easy to build different profiling tools with [musl libc](http://www.musl-libc.org/), which is used in Alpine Linux.
 
